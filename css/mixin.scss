@@ -1,0 +1,30 @@
+
+@mixin centerPo($x, $y, $z, $trX, $trY){
+    position: absolute;
+    left: $x;
+    top: $y;
+    z-index: $z;
+
+    @if $x == 50% and $y == 50% {
+        transform: translate(-50%,-50%);
+    } @else if $x == 50% {
+        transform: translateX(-50%);
+    } @else if $y == 50% {
+        transform: translateY(-50%);
+    }
+
+    transform: translate($trX, $trY);
+}
+
+
+@mixin btn1($btC){
+    margin-top: 4.4rem; 
+    font-size: 3rem; 
+    padding: 1rem 0; 
+    width: 25rem; 
+    background: $btC; 
+    border-radius: 1.5rem; 
+    color: $fontColor3; 
+    display: block; 
+    text-align: center;
+}
